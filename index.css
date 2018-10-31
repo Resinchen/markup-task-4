@@ -1,0 +1,85 @@
+main
+{
+    text-align: justify;
+    font-size: 0;
+    padding: 0 20px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+p
+{
+    margin: 10px;
+}
+
+.cat-block
+{
+    max-width: 350px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px 10px;
+    border: 1px solid lightgrey;
+}
+
+.name
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 48px;
+    margin: 0;
+}
+
+.name:hover,
+.name > a:hover
+{
+    color: red;
+}
+
+.full-description
+{
+    display: none;
+}
+
+.checkbox_class:checked ~ main .cat-block
+{
+    max-width: inherit;
+    display: block;
+    min-height: 420px;
+}
+
+.checkbox_class:checked ~ main .cat-block .description
+{
+    display: none;
+}
+
+.checkbox_class:checked ~ main .cat-block .full-description
+{
+    display: block;
+    margin: 10px;
+}
+
+.checkbox_class:checked ~ main .cat-block img
+{
+    margin: 10px;
+    float: left;
+}
+
+.checkbox_class:not(:checked) ~ main .cat-block img
+{
+    width: 100%;
+}
+
+.cat-block:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.image-cat:hover
+{
+    box-shadow: 0 0 25px yellow;
+}
